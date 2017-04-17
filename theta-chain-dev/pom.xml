@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<groupId>com.thetachain</groupId>
+	<artifactId>theta-chain-dev</artifactId>
+	<packaging>jar</packaging>
+	<version>0.1.0</version>
+
+	<name>theta-chain-annotations</name>
+	<description>This library contains the annotations and any classes/interfaces needed to write Theta-Chain-Contracts and deploy them to Theta-Chain</description>
+	<url>https://github.com/theta-chain/dev-kit</url>
+
+	<licenses>
+		<license>
+			<name>Theta-Chain License Agreement</name>
+			<url>http://thetachain.com/License.pdf</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Pramod Chandersekhar</name>
+			<email>pramod@thetachain.com</email>
+			<organization>Theta-Chain Inc</organization>
+			<organizationUrl>http://www.thetachain.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/theta-chain/dev-kit.git</connection>
+		<developerConnection>scm:git:ssh://github.com:theta-chain/dev-kit.git</developerConnection>
+		<url>http://github.com/theta-chain/dev-kit/tree/master</url>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+
+
+	<dependencies>
+	</dependencies>
+</project>

@@ -3,14 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<skipGPG>false</skipGPG>
 	</properties>
 
 	<groupId>com.thetachain</groupId>
 	<artifactId>theta-chain-dev</artifactId>
 	<packaging>jar</packaging>
-	<version>0.1.0</version>
+	<version>0.2.0</version>
 
-	<name>theta-chain-annotations</name>
+	<name>theta-chain-dev</name>
 	<description>This library contains the annotations and any classes/interfaces needed to write Theta-Chain-Contracts and deploy them to Theta-Chain</description>
 	<url>https://github.com/theta-chain/dev-kit</url>
 
@@ -68,6 +71,9 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<version>1.5</version>
+				<configuration>
+				<skip>${skipGPG}</skip>
+				</configuration>
 				<executions>
 					<execution>
 						<id>sign-artifacts</id>

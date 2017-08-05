@@ -11,7 +11,7 @@
 	<groupId>com.thetachain</groupId>
 	<artifactId>theta-chain-dev</artifactId>
 	<packaging>jar</packaging>
-	<version>0.2.0</version>
+	<version>0.3.0</version>
 
 	<name>theta-chain-dev</name>
 	<description>This library contains the annotations and any classes/interfaces needed to write Theta-Chain-Contracts and deploy them to Theta-Chain</description>
